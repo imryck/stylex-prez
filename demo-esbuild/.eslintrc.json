@@ -1,0 +1,54 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "standard-with-typescript",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@stylexjs"
+  ],
+  "settings": {
+    "react":{
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "no-type-imports"
+      }
+    ],
+    "@typescript-eslint/space-before-function-paren": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@stylexjs/valid-styles": [
+      "warn",
+      {
+        "propLimits": {
+          "fontSize": {
+            "limit": "number"
+          },
+          "padding": {
+            "limit": [0, 4, 8, 16, 32, 64]
+          }
+        }
+      }
+    ],
+    "@stylexjs/sort-keys": [
+      "warn",
+      {
+        "minKeys": 2,
+        "allowLineSeparatedGroups": true
+      }
+    ]
+  }
+}

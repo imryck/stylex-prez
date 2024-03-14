@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build": "rimraf dist && rollup -c rollup.config.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "@stylexjs/stylex": "^0.5.1"
+  },
+  "devDependencies": {
+    "@stylexjs/eslint-plugin": "^0.5.1",
+    "@stylexjs/rollup-plugin": "^0.5.1",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.13.0"
+  }
+}

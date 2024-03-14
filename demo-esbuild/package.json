@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "start": "node serve.mjs",
+    "build": "node build.mjs",
+    "serve": "docker run --rm -p 8082:80 -v ./dist:/usr/share/nginx/html:ro -v ./conf/nginx.conf:/etc/nginx/conf.d/default.conf nginx",
+    "lint": "eslint \"src/*.{ts,tsx}\""
+  },
+  "dependencies": {
+    "@stylexjs/stylex": "^0.5.1",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1"
+  },
+  "devDependencies": {
+    "@stylexjs/esbuild-plugin": "^0.5.1",
+    "@stylexjs/eslint-plugin": "^0.5.1",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "esbuild": "^0.20.1",
+    "esbuild-plugin-copy": "^2.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "typescript": "^5.3.3"
+  }
+}

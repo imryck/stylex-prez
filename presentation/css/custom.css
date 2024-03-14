@@ -1,0 +1,278 @@
+video {
+  pointer-events: none;
+}
+
+.cover-background {
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+}
+
+.whoami .onepoint-logo {
+  text-align: left;
+}
+
+.whoami .onepoint-logo img {
+  width: 200px;
+  margin: 0;
+  margin-left: -20px;
+}
+
+.tailwind-logo {
+    width: 50%;
+    float: right;
+}
+
+.bundler {
+  width: 200px;
+  position: absolute;
+}
+
+.esbuild {
+  top: 380px;
+  left: 90px;
+}
+
+.webpack {
+  top: 62px;
+  left: 293px;
+}
+
+.rollup {
+  top: 450px;
+  right: 150px;
+}
+
+.vitejs {
+  top: 170px;
+  right: 80px;
+}
+
+.babel {
+  top: 320px;
+  right: 340px;
+}
+
+.demo-time img {
+  max-height: 600px;
+}
+
+.plongeon img {
+  max-height: 600px;
+}
+
+.demo-theme-re {
+  color: rgb(64, 115, 158);
+  text-shadow: white 6px 6px;
+  font-size: 2.6em;
+  font-weight: bolder;
+  position: absolute;
+  top: 150px;
+  left: 300px;
+}
+
+.frise img {
+  margin-top: 100px;
+  width: 150%;
+}
+
+.frise-item {
+  position: absolute;
+}
+
+.frise-item img {
+  width: 60px;
+}
+
+.frise-date {
+  position: absolute;
+  font-size: 0.6em;
+  color: rgb(75, 75, 75);
+  font-weight: bold;
+  text-align: center;
+  max-width: 100px;
+}
+
+.frise-date p {
+  line-height: 1.1em;
+}
+
+.frise-date-css2 {
+  left: 40px;
+  top: 160px;
+}
+
+.frise-item-css2 {
+  left: 38px;
+  top: 230px;
+}
+
+.frise-date-sass {
+  left: 200px;
+  top: -60px;
+}
+
+.frise-item-sass {
+  left: 202px;
+  top: -150px;
+}
+
+.frise-date-css3 {
+  left: 355px;
+  top: -130px;
+}
+
+.frise-item-css3 {
+  left: 352px;
+  top: -60px;
+}
+
+.frise-date-bootstrap {
+  left: 505px;
+  top: -60px;
+}
+
+.frise-item-bootstrap {
+  left: 502px;
+  top: -150px;
+}
+
+.frise-date-atomic {
+  left: 655px;
+  top: -130px;
+}
+
+.frise-item-atomic {
+  left: 632px;
+  top: -60px;
+}
+
+.frise-date-tailwind {
+  left: 805px;
+  top: -60px;
+}
+
+.frise-item-tailwind {
+  left: 802px;
+  top: -150px;
+}
+
+.how-it-works-before {
+  position: absolute;
+  left: 0;
+  top: 210px;
+  max-width: 300px;
+}
+
+.how-it-works-before__caption  {
+  position: absolute;
+  left: 110px;
+  top: 170px;
+  font-size: 0.8em;
+  color: rgb(75, 75, 75);
+  font-weight: bold;
+}
+
+.how-it-works-after {
+  position: absolute;
+  right: 0;
+  top: 250px;
+  max-width: 380px;
+}
+
+.how-it-works-after__caption  {
+  position: absolute;
+  right: 180px;
+  top: 200px;
+  font-size: 0.8em;
+  color: rgb(75, 75, 75);
+  font-weight: bold;
+}
+
+.how-it-works__arrow{
+  max-width: 40px;
+  position: absolute;
+  top: 250px;
+}
+
+.how-it-works_arrow__left{
+  left: 330px;
+}
+
+.how-it-works_arrow__right {
+  left: 520px;
+}
+
+.how-it-works__compiler {
+  position: absolute;
+  max-width: 100px;
+  top: 225px;
+  left: 390px;
+}
+
+.code-create-styles .code-wrapper code {
+  min-height: 480px;
+}
+
+.whoami > .content {
+  display: flex;
+  flex-direction: row;
+}
+
+.whoami img {
+  border-radius: 25%;
+  width: 70%;
+}
+
+.whoami .col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.whoami .col-right p {
+  text-align: left;
+  font-size: 0.8em;
+}
+
+.large-code-exemple pre.code-wrapper {
+  width: 100%;
+}
+
+.large-code-exemple pre.code-wrapper code {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+section.sauter-le-pas h2 {
+  color: white;
+}
+
+section.questions {
+  height: 500px;
+  background-color:rgba(255, 255, 255, 0.8);
+  opacity: 0.33;
+  border-radius: 1px;
+  box-shadow: 0 0 0 8px rgba(0,0,0,0.2);
+}
+
+section.questions h2 {
+  margin-top: 200px;
+}
+
+.qrcode img {
+  position: absolute;
+  top: 50px;
+  width: 250px;
+}
+
+.qrcode.github img {
+  left: 100px;
+}
+
+.qrcode.openfeedback img {
+  right: 100px;
+}
