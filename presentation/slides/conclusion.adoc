@@ -53,10 +53,19 @@ image::images/team-work.jpg[]
 image::images/des-questions.jpeg[background, size=cover]
 
 [.qrcode.github]
-image::images/StyleXprezGithub.svg[]
+image::images/qrcode_github.com.png[]
+--
+[.qrcode.title.github]
+Github
+--
 
 [.qrcode.openfeedback]
-image::images/StylexOpenFeedback.svg[]
+image::images/qrcode_openfeedback.io.png[]
+--
+[.qrcode.title.openfeedback]
+openfeedback
+--
+
 
 
 [NOTE.speaker]

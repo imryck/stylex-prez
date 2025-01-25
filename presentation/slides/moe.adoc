@@ -11,7 +11,7 @@ image::images/demo/demo-product.png[]
 * Exemple simple de mise en forme d'une fiche produit
 --
 
-[source,javascript,highlight="18-21|41|22-30|43-47|1-8|11-17|35-40"]
+[source,javascript,highlight="18-30|41-47|1-8|11-17|35-40"]
 ----
 export const styleBases = stylex.create({
   borderRadius: {

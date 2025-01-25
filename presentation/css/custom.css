@@ -269,10 +269,19 @@ section.questions h2 {
   width: 250px;
 }
 
-.qrcode.github img {
+.qrcode.title {
+  position: absolute;
+  top: 320px;
+  width: 250px;
+  text-align: center;
+}
+
+.qrcode.github img,
+.qrcode.github {
   left: 100px;
 }
 
-.qrcode.openfeedback img {
+.qrcode.openfeedback img,
+.qrcode.openfeedback {
   right: 100px;
 }
