@@ -6,12 +6,12 @@
     "lint": "eslint \"src/*.{ts,tsx}\""
   },
   "dependencies": {
-    "@stylexjs/stylex": "^0.5.1",
+    "@stylexjs/stylex": "^0.10.1",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1"
   },
   "devDependencies": {
-    "@stylexjs/esbuild-plugin": "^0.5.1",
+    "@stylexjs/esbuild-plugin": "^0.10.1",
     "@stylexjs/eslint-plugin": "^0.5.1",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
