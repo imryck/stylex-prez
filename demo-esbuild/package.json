@@ -16,14 +16,14 @@
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "esbuild": "^0.20.1",
+    "esbuild": "^0.24.2",
     "esbuild-plugin-copy": "^2.1.1",
     "eslint": "^8.57.0",
     "eslint-config-standard-with-typescript": "^43.0.1",
-    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.33.2",
-    "typescript": "^5.3.3"
+    "eslint-plugin-promise": "^6.6.0",
+    "eslint-plugin-react": "^7.37.4",
+    "typescript": "^5.7.3"
   }
 }
