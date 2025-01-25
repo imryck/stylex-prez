@@ -1,6 +1,6 @@
 [.sauter-le-pas]
 == Sauter le pas ?
-image::images/sauter-le-pas.jpeg[background, size=cover]
+image::images/sauter-le-pas.jpeg[background, size=700px]
 
 [NOTE.speaker]
 --

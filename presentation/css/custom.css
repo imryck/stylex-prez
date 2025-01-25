@@ -1,7 +1,58 @@
+/**
+ * Colors
+ */
+:root {
+  --r-main-font: SegoeUI, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --r-main-font-size: 42px;
+  --r-main-color: #222333;
+  font-weight: 400;
+
+  --background-color: #fff;
+  --heading-color: #6abfad;
+  --text-color: #222333;
+  --primary-color: #6abfad;
+}
+
+/**
+ * Common
+ */
+.reveal h1, .reveal h2 {
+  color: var(--heading-color);
+}
+
+.reveal p {
+  color: var(--text-color);
+}
+
+footer {
+  z-index: 10;
+  background: white;
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  bottom: 0;
+  min-height: 80px;
+  text-align: center;
+}
+
+footer .onepoint-logo {
+  margin-top: 10px;
+}
+
+footer .tnt {
+  margin-top: 10px;
+  left: 50px;
+  position: absolute;
+  height: 40px;
+}
+
 video {
   pointer-events: none;
 }
 
+/**
+ * Cover
+ */
 .cover-background {
     position: absolute;
     top: -25%;
@@ -64,16 +115,6 @@ video {
   max-height: 600px;
 }
 
-.demo-theme-re {
-  color: rgb(64, 115, 158);
-  text-shadow: white 6px 6px;
-  font-size: 2.6em;
-  font-weight: bolder;
-  position: absolute;
-  top: 150px;
-  left: 300px;
-}
-
 .frise img {
   margin-top: 100px;
   width: 150%;
@@ -90,7 +131,7 @@ video {
 .frise-date {
   position: absolute;
   font-size: 0.6em;
-  color: rgb(75, 75, 75);
+  color: var(--text-color);
   font-weight: bold;
   text-align: center;
   max-width: 100px;
@@ -172,7 +213,7 @@ video {
   left: 110px;
   top: 170px;
   font-size: 0.8em;
-  color: rgb(75, 75, 75);
+  color: var(--text-color);
   font-weight: bold;
 }
 
@@ -188,7 +229,7 @@ video {
   right: 180px;
   top: 200px;
   font-size: 0.8em;
-  color: rgb(75, 75, 75);
+  color: var(--text-color);
   font-weight: bold;
 }
 
@@ -223,7 +264,7 @@ video {
 }
 
 .whoami img {
-  border-radius: 25%;
+  border-radius: 12%;
   width: 70%;
 }
 

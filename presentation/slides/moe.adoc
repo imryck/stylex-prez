@@ -386,25 +386,25 @@ image::./images/vitejs.svg[]
 * Babel permet de s'intégrer avec à peu près n'importe quoi
 --
 
-=== Un exemple ?
-
-[.demo-time]
-image::images/demo-time-js.jpeg[]
-
-[NOTE.speaker]
---
-* Esbuild et Typescript
-** Montrer la configuration mais ne pas rentrer trop dans détail
-** Parler d'ESLint
-*  `npm start`
-* Montrer la page
-* Ouvrir la console et inspecter un élément pour montrer les classes associées
-** Intéressant de montrer par exemple le $ pour le pseudo élément
-* Démonstration erreurs ?
-* Démonstration de modification
-** Une autre chose qu'on a rapidement envie de faire c'est de partager des définition de styles. Exemple radius. Faire une démo de modification
-* Démonstration `npm run build` puis montrer le résultat dans le navigateur
---
+// === Un exemple ?
+//
+// [.demo-time]
+// image::images/demo-time-js.jpeg[]
+//
+// [NOTE.speaker]
+// --
+// * Esbuild et Typescript
+// ** Montrer la configuration mais ne pas rentrer trop dans détail
+// ** Parler d'ESLint
+// *  `npm start`
+// * Montrer la page
+// * Ouvrir la console et inspecter un élément pour montrer les classes associées
+// ** Intéressant de montrer par exemple le $ pour le pseudo élément
+// * Démonstration erreurs ?
+// * Démonstration de modification
+// ** Une autre chose qu'on a rapidement envie de faire c'est de partager des définition de styles. Exemple radius. Faire une démo de modification
+// * Démonstration `npm run build` puis montrer le résultat dans le navigateur
+// --
 
 ////
 === Projet existant Angular
