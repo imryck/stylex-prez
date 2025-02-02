@@ -411,6 +411,14 @@ video {
   overflow-y: scroll;
 }
 
+.theme-video-mask {
+  position: absolute;
+  top: 514px;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
 section.sauter-le-pas h2 {
   color: white;
 }

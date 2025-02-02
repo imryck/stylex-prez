@@ -14,13 +14,13 @@ image::images/sauter-le-pas.jpeg[background, size=700px]
 Pas adapté à tous les contextes
 
 [%step]
-Écosystème naissant
+Communauté réduite
 
 [%step]
-Vous rencontrerez des problèmes
+Mais très fonctionnel
 
 [%step]
-Mais déjà très fonctionnel
+Tient ses promesses
 
 [NOTE.speaker]
 --

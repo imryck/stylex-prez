@@ -7,10 +7,11 @@ image::./images/oups-dit-it-again.jpg[]
 * StyleX c'est une histoire de Style
 * Histoire de la problématique de poids des CSS (+10Mo de style sur Facebook.com à l'époque)
 * Meta a communiqué la première fois en 2021
-* Aujourd'hui au sein des principales application de Meta (Theads  ... ah ok personne connais :D), Facebook, Instagram
+* Aujourd'hui au sein des principales application de Meta Theads, Facebook, Instagram
+* https://www.youtube.com/watch?v=ur-sGzUWId4
 --
 
-=== De souffrance
+=== Le CSS à travers les âges
 
 [%step]
 --
@@ -75,7 +76,7 @@ image::./images/frise/tailwind.png[]
 * 2019, Tailwind
 --
 
-=== Et d'atomicité
+=== Atomic CSS
 
 [source,css]
 ----

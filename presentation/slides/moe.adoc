@@ -11,25 +11,9 @@ image::images/demo/demo-product.png[]
 * Exemple simple de mise en forme d'une fiche produit
 --
 
-[source,javascript,highlight="18-30|41-47|1-8|11-17|35-40"]
+[source,javascript,highlight="1-15|25-31|36-43|45-53|55-66"]
 ----
-export const styleBases = stylex.create({
-  borderRadius: {
-    borderColor: colors.borderMain,
-    borderRadius: radius.medium,
-    borderStyle: 'solid',
-    borderWidth: 1
-  }
-});
-
 const styles = stylex.create({
-  body: {
-    backgroundColor: 'white',
-    borderWidth: 2,
-    display: 'flex',
-    flexDirection: 'column',
-    padding: '0.8rem'
-  },
   image: {
     height: 180,
     objectFit: 'contain'
@@ -63,6 +47,39 @@ export const Product = ({ product }: ProductProps) => {
     </div>
   );
 }
+
+export const styleBases = stylex.create({
+  borderRadius: {
+    borderColor: colors.borderMain,
+    borderRadius: radius.medium,
+    borderStyle: 'solid',
+    borderWidth: 1
+  }
+});
+
+const styles = stylex.create({
+  body: {
+    backgroundColor: 'white',
+    borderWidth: 2,
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '0.8rem'
+  }
+})
+
+export const Product = ({ product }: ProductProps) => {
+  return (
+    <div key={product.title}
+        {...stylex.props(
+          styleBases.borderRadius,
+          styles.body
+        )}
+    >
+      // ...
+    </div>
+  );
+}
+
 ----
 
 [NOTE.speaker]
@@ -84,7 +101,7 @@ video::videos/demo-nav-hover.webm[opts="autoplay,loop"]
 
 === !
 
-[source,javascript,highlight="3-7|11-14|17-20|33-44"]
+[source,javascript,highlight="3-7|11-14|17-20|33-39"]
 ----
 const styles = stylex.create({
   listItem: {
@@ -183,34 +200,35 @@ export const ProductList = () => {
 
 --
 
-=== !
-
-[source,javascript,highlight="3-7|10-14"]
-----
-const styles = stylex.create({
-  menuDesktop: {
-    display: {
-      default: 'none',
-      '@media (min-width: 640px)': 'none',
-      '@media (min-width: 768px)': 'block'
-    }
-  },
-  menuMobile: {
-    display: {
-      default: 'block',
-      '@media (min-width: 640px)': 'block',
-      '@media (min-width: 768px)': 'none'
-    },
-    marginTop: spacing.sm
-  }
-});
-----
-
-[NOTE.speaker]
---
-* L'implémentation est équivalente mais avec des media query comme clé
-* Un probléme ici c'est qu'on répéte beaucoup de valeurs mais aussi de clé
---
+// TODO garder pour les formats plus long
+// === !
+//
+// [source,javascript,highlight="3-7|10-14"]
+// ----
+// const styles = stylex.create({
+//   menuDesktop: {
+//     display: {
+//       default: 'none',
+//       '@media (min-width: 640px)': 'none',
+//       '@media (min-width: 768px)': 'block'
+//     }
+//   },
+//   menuMobile: {
+//     display: {
+//       default: 'block',
+//       '@media (min-width: 640px)': 'block',
+//       '@media (min-width: 768px)': 'none'
+//     },
+//     marginTop: spacing.sm
+//   }
+// });
+// ----
+//
+// [NOTE.speaker]
+// --
+// * L'implémentation est équivalente mais avec des media query comme clé
+// * Un probléme ici c'est qu'on répéte beaucoup de valeurs mais aussi de clé
+// --
 
 === Variables
 
@@ -306,15 +324,17 @@ const styles: StyleXStyles<{
 
 === Thème
 
-video::videos/demo-theme.webm[opts="autoplay,loop"]
+video::videos/stylex-dark-mode.webm[opts="autoplay,loop"]
+
+[.theme-video-mask]
+--
+--
 
 === !
 
-[source,javascript,highlight="3-13|17-20|32-36"]
+[source,javascript,highlight="1-11 |17-20|32-36"]
 ----
-
 const DARK = '@media (prefers-color-scheme: dark)';
-
 export const darkTheme = stylex.createTheme(colors, {
   titleMain: {
     default: pallette.GRAY_700,
@@ -386,6 +406,7 @@ image::./images/vitejs.svg[]
 * Babel permet de s'intégrer avec à peu près n'importe quoi
 --
 
+// // TODO garder pour les formats plus long
 // === Un exemple ?
 //
 // [.demo-time]
@@ -425,3 +446,39 @@ image::./images/vitejs.svg[]
 --
 
 ////
+
+=== L'expérience développeur
+
+[%step]
+--
+**The good**
+
+* Rapide à apprendre
+* Aucun problème de collision
+* Prédictible
+* DRY
+--
+
+=== !
+
+**The bad**
+
+[source,html]
+----
+<div class="Product__styles.body backgroundColor-xvaye32
+    bases__styleBases.borderRadius borderColor-xootx95
+    borderColor-xshxwi3 borderRadius-x1dlncd6
+    borderStyle-x1y0btm7 borderWidth-xdh2fpr
+    display-x78zum5 flexDirection-xdt5ytf
+    padding-x1cslfwc tokens__darkTheme
+    transitionDuration-xippbsu
+    transitionProperty-x1xwloaz x1bon4hu xk03xnz">
+    <!-- ... -->
+</div>
+----
+
+=== !
+
+**The ugly**
+
+image::images/cascading.jpg[]
