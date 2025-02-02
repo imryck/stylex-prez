@@ -101,7 +101,7 @@ video::videos/demo-nav-hover.webm[opts="autoplay,loop"]
 
 === !
 
-[source,javascript,highlight="3-7|11-14|17-20|33-39"]
+[source,javascript,highlight="3-7 |33-39"]
 ----
 const styles = stylex.create({
   listItem: {
@@ -167,7 +167,7 @@ video::videos/demo-responsive.webm[opts="autoplay,loop"]
 [.large-code-exemple]
 --
 
-[source,javascript,highlight="6-13|21"]
+[source,javascript,highlight="6-13"]
 ----
 const styles = stylex.create({
   productContainer: {
@@ -275,7 +275,7 @@ const styles = stylex.create({
 [.large-code-exemple]
 --
 
-[source,javascript,highlight="1-14|16-27|29-35"]
+[source,javascript,highlight="16-27|29-35"]
 ----
 type RGB_COLOR = `rgb(${number} ${number} ${number})`
 type COLORS_VARIANT = 'GRAY_900' | 'GRAY_800' | 'GRAY_700' | 'GRAY_600' | 'GRAY_200' | 'GRAY_100' | 'WHITE'
@@ -332,7 +332,7 @@ video::videos/stylex-dark-mode.webm[opts="autoplay,loop"]
 
 === !
 
-[source,javascript,highlight="1-11 |17-20|32-36"]
+[source,javascript,highlight="1-11|15-23"]
 ----
 const DARK = '@media (prefers-color-scheme: dark)';
 export const darkTheme = stylex.createTheme(colors, {
@@ -346,20 +346,6 @@ export const darkTheme = stylex.createTheme(colors, {
   }
   /* ...*/
 });
-
-export const ProductList = () => {
-  return (
-    <div {...stylex.props(
-        darkTheme,
-        styles.productContainer
-      )}>
-      {
-        products.map((product) =>
-          <Product key={product.title} product={product}/>)
-      }
-    </div>
-  )
-}
 
 export const Product = ({ product }: ProductProps) => {
   return (
