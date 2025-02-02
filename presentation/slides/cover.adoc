@@ -1,13 +1,26 @@
 = est-il le React du CSS ?
 
 [.cover-background]
-image::./images/stylex-logo-small.svg[]
+--
+--
 
+[.cover-x1]
+--
+[.cover-x1-circle]
+----
+----
+--
 
+[.cover-x2]
+--
+[.cover-x2-circle]
+----
+----
+--
 
 [NOTE.speaker]
 --
-* StyleX, un projet de Meta récemment passé open source
+* StyleX, un projet de Meta passé open source en décembre 2023
 * Nous allons tenter de répondre à la question: "..."
 --
 
