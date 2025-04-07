@@ -1,4 +1,7 @@
 = est-il le React du CSS ?
+:title-slide-background-image: images/cover.jpg
+:title-slide-background-size: cover
+:title-slide-background-repeat: no-repeat
 
 [.cover-background]
 --
@@ -25,8 +28,6 @@
 --
 
 == !
-
-
 
 [.whoami]
 ****

@@ -1,6 +1,6 @@
 [.sauter-le-pas]
 == Sauter le pas ?
-image::images/sauter-le-pas.jpeg[background, size=700px]
+// image::images/sauter-le-pas.jpeg[background, size=cover, class=test]
 
 [NOTE.speaker]
 --
@@ -15,9 +15,6 @@ Pas adapté à tous les contextes
 
 [%step]
 Communauté réduite
-
-[%step]
-Mais très fonctionnel
 
 [%step]
 Tient ses promesses

@@ -437,7 +437,7 @@ image::./images/vitejs.svg[]
 
 [%step]
 --
-**The good**
+[.txt-highlighted]**The good**
 
 * Rapide à apprendre
 * Aucun problème de collision
@@ -447,7 +447,7 @@ image::./images/vitejs.svg[]
 
 === !
 
-**The bad**
+[.txt-highlighted]**The bad**
 
 [source,html]
 ----
@@ -465,6 +465,6 @@ image::./images/vitejs.svg[]
 
 === !
 
-**The ugly**
+[.txt-highlighted]**The ugly**
 
 image::images/cascading.jpg[]
