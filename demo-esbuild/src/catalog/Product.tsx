@@ -19,8 +19,8 @@ const styles = stylex.create({
     display: 'flex',
     flexDirection: 'column',
     padding: spacing.xs,
-    transitionProperty: 'border',
-    transitionDuration: '0.8s'
+    transitionDuration: '0.8s',
+    transitionProperty: 'border'
   },
   image: {
     height: 180,

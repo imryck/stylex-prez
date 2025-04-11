@@ -1,6 +1,6 @@
 import path from 'path';
-import { fileURLToPath } from 'url';
-import { copy } from 'esbuild-plugin-copy';
+import {fileURLToPath} from 'url';
+import {copy} from 'esbuild-plugin-copy';
 import stylexPlugin from '@stylexjs/esbuild-plugin';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -13,16 +13,15 @@ export const generateBuildConf = (dev) => {
     bundle: true,
     minify: !dev,
     sourcemap: dev,
-    logLevel: dev ? 'info': 'error',
-    loader: { '.svg': 'dataurl' },
+    logLevel: dev ? 'info' : 'error',
+    loader: {'.svg': 'dataurl'},
     plugins: [
       stylexPlugin({
         dev,
         generatedCSSFileName: path.resolve(__dirname, `${targetFolder}/component.css`),
         // Utilise les CSS layer à la place du polyfill :not(#\#)
-        useCSSLayers : true,
-        // Evite la suppression des variables lors de la phase de treeshaking
-        treeshakeCompensation: true
+        useCSSLayers: true,
+        stylexImports: ['@stylexjs/stylex']
       }),
       copy({
         resolveFrom: __dirname,

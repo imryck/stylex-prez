@@ -219,29 +219,6 @@ video {
   display: none;
 }
 
-.reveal-viewport.title footer .cover {
-  display: block;
-  position: absolute;
-  z-index: 10;
-  left: 0;
-  width: 100%;
-  bottom: 0;
-  padding-bottom: 40px;
-  padding-top: 40px;
-  background: radial-gradient(ellipse at bottom, #000, transparent 60%);
-  text-align: center;
-}
-
-.reveal-viewport.title footer .cover .brand {
-  width: 40%;
-}
-
-/*.cover-brand {*/
-/*  position: absolute;*/
-/*  width: 80%;*/
-/*  top: 20px;*/
-/*}*/
-
 .reveal-viewport.title h1 {
   font-family: var(--r-title-font), serif;
   font-size: 2em;

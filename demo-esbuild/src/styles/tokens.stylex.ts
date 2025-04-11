@@ -1,4 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
+import { StyleXStyles } from '@stylexjs/stylex';
 
 type BREAKPOINTS = 640 | 768 | 1024 | 1280
 
@@ -19,36 +20,37 @@ type COLORS_VARIANT = 'GRAY_900' |
 'GRAY_600' |
 'GRAY_200' |
 'GRAY_100' |
-'WHITE'
+'WHITE' |
+'RED'
 
-type RGB_COLOR = `rgb(${number} ${number} ${number})`
+export type RGB_COLOR = `rgb(${number} ${number} ${number})`
 
-const pallette: Record<COLORS_VARIANT, RGB_COLOR> = {
+const palette: Record<COLORS_VARIANT, RGB_COLOR> = {
   GRAY_900: 'rgb(17 24 39)',
   GRAY_800: 'rgb(31 41 55)',
   GRAY_700: 'rgb(55 65 81)',
   GRAY_600: 'rgb(75 85 101)',
   GRAY_200: 'rgb(229 231 235)',
   GRAY_100: 'rgb(248 252 250)',
-  WHITE: 'rgb(255 255 255)'
+  WHITE: 'rgb(255 255 255)',
+  RED: 'rgb(255 0 0)'
 }
 
-type PALLETTE_COLOR = typeof pallette[COLORS_VARIANT]
-
-export const colors = stylex.defineVars<Record<string, PALLETTE_COLOR>>({
-  backgroundNavMain: pallette.GRAY_900,
-  backgroundNavSecondary: pallette.GRAY_800,
-  backgroundNavActive: pallette.GRAY_700,
-  linkNavMain: pallette.WHITE,
-  linkNavHover: pallette.GRAY_200,
-  titleMain: pallette.GRAY_700,
-  titleSecondary: pallette.GRAY_700,
-  textMain: pallette.GRAY_900,
-  textSecondary: pallette.GRAY_600,
-  backgroundMain: pallette.WHITE,
-  backgroundSecondary: pallette.GRAY_100,
-  borderMain: pallette.GRAY_200,
-  borderSecondary: pallette.GRAY_600
+export const colors = stylex.defineVars({
+  backgroundNavMain: stylex.types.color(palette.GRAY_900),
+  backgroundNavSecondary: stylex.types.color(palette.GRAY_800),
+  backgroundNavActive: stylex.types.color(palette.GRAY_700),
+  linkNavMain: stylex.types.color(palette.WHITE),
+  linkNavHover: stylex.types.color(palette.GRAY_200),
+  titleMain: stylex.types.color(palette.GRAY_700),
+  titleSecondary: stylex.types.color(palette.GRAY_700),
+  textMain: stylex.types.color(palette.GRAY_900),
+  textSecondary: stylex.types.color(palette.GRAY_600),
+  backgroundMain: stylex.types.color(palette.WHITE),
+  backgroundSecondary: stylex.types.color(palette.GRAY_100),
+  borderMain: stylex.types.color(palette.GRAY_200),
+  borderSecondary: stylex.types.color(palette.GRAY_600),
+  danger: stylex.types.color(palette.RED)
 });
 
 export const textSizes = stylex.defineVars({
@@ -100,36 +102,36 @@ export const displayScreen = stylex.defineVars({
 const DARK = '@media (prefers-color-scheme: dark)';
 
 export const darkTheme = stylex.createTheme(colors, {
-  titleMain: {
-    default: pallette.GRAY_700,
-    [DARK]: pallette.WHITE
-  },
-  titleSecondary: {
-    default: pallette.GRAY_700,
-    [DARK]: pallette.GRAY_100
-  },
-  textMain: {
-    default: pallette.GRAY_900,
-    [DARK]: pallette.WHITE
-  },
-  textSecondary: {
-    default: pallette.GRAY_600,
-    [DARK]: pallette.GRAY_100
-  },
-  backgroundMain: {
-    default: pallette.WHITE,
-    [DARK]: pallette.GRAY_700
-  },
-  backgroundSecondary: {
-    default: pallette.GRAY_100,
-    [DARK]: pallette.GRAY_700
-  },
-  borderMain: {
-    default: pallette.GRAY_200,
-    [DARK]: pallette.GRAY_600
-  },
-  borderSecondary: {
-    default: pallette.GRAY_600,
-    [DARK]: pallette.GRAY_200
-  }
+  titleMain: stylex.types.color({
+    default: palette.GRAY_700,
+    [DARK]: palette.WHITE
+  }),
+  titleSecondary: stylex.types.color({
+    default: palette.GRAY_700,
+    [DARK]: palette.GRAY_100
+  }),
+  textMain: stylex.types.color({
+    default: palette.GRAY_900,
+    [DARK]: palette.WHITE
+  }),
+  textSecondary: stylex.types.color({
+    default: palette.GRAY_600,
+    [DARK]: palette.GRAY_100
+  }),
+  backgroundMain: stylex.types.color({
+    default: palette.WHITE,
+    [DARK]: palette.GRAY_700
+  }),
+  backgroundSecondary: stylex.types.color({
+    default: palette.GRAY_100,
+    [DARK]: palette.GRAY_700
+  }),
+  borderMain: stylex.types.color({
+    default: palette.GRAY_200,
+    [DARK]: palette.GRAY_600
+  }),
+  borderSecondary: stylex.types.color({
+    default: palette.GRAY_600,
+    [DARK]: palette.GRAY_200
+  })
 });

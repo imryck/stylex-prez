@@ -22,8 +22,8 @@ export const MainMenu = ({ activeLink, setActiveLink, customStyles }: {
   return (
     <ul {...stylex.props(styles.list, customStyles)}>
       {
-        mainMenuLinks.map(link => 
-          <Link key={link.title} 
+        mainMenuLinks.map(link =>
+          <Link key={link.title}
                 link={link}
                 ariaCurrent={activeLink === link.href}
                 setActiveLink={setActiveLink} />

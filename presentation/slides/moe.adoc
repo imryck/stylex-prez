@@ -167,7 +167,7 @@ video::videos/demo-responsive.webm[opts="autoplay,loop"]
 [.large-code-exemple]
 --
 
-[source,javascript,highlight="6-13"]
+[source,javascript,highlight="6-13|21"]
 ----
 const styles = stylex.create({
   productContainer: {
@@ -200,35 +200,34 @@ export const ProductList = () => {
 
 --
 
-// TODO garder pour les formats plus long
-// === !
-//
-// [source,javascript,highlight="3-7|10-14"]
-// ----
-// const styles = stylex.create({
-//   menuDesktop: {
-//     display: {
-//       default: 'none',
-//       '@media (min-width: 640px)': 'none',
-//       '@media (min-width: 768px)': 'block'
-//     }
-//   },
-//   menuMobile: {
-//     display: {
-//       default: 'block',
-//       '@media (min-width: 640px)': 'block',
-//       '@media (min-width: 768px)': 'none'
-//     },
-//     marginTop: spacing.sm
-//   }
-// });
-// ----
-//
-// [NOTE.speaker]
-// --
-// * L'implémentation est équivalente mais avec des media query comme clé
-// * Un probléme ici c'est qu'on répéte beaucoup de valeurs mais aussi de clé
-// --
+=== !
+
+[source,javascript,highlight="3-7|10-14"]
+----
+const styles = stylex.create({
+  menuDesktop: {
+    display: {
+      default: 'none',
+      '@media (min-width: 640px)': 'none',
+      '@media (min-width: 768px)': 'block'
+    }
+  },
+  menuMobile: {
+    display: {
+      default: 'block',
+      '@media (min-width: 640px)': 'block',
+      '@media (min-width: 768px)': 'none'
+    },
+    marginTop: spacing.sm
+  }
+});
+----
+
+[NOTE.speaker]
+--
+* L'implémentation est équivalente mais avec des media query comme clé
+* Un probléme ici c'est qu'on répéte beaucoup de valeurs mais aussi de clé
+--
 
 === Variables
 
@@ -275,12 +274,11 @@ const styles = stylex.create({
 [.large-code-exemple]
 --
 
-[source,javascript,highlight="16-27|29-35"]
+[source,javascript,highlight="1-11|13-27|29-35"]
 ----
 type RGB_COLOR = `rgb(${number} ${number} ${number})`
-type COLORS_VARIANT = 'GRAY_900' | 'GRAY_800' | 'GRAY_700' | 'GRAY_600' | 'GRAY_200' | 'GRAY_100' | 'WHITE'
 
-const pallette: Record<COLORS_VARIANT, RGB_COLOR> = {
+const palette: Record<COLORS_VARIANT, RGB_COLOR> = {
   GRAY_900: 'rgb(17 24 39)',
   GRAY_800: 'rgb(31 41 55)',
   GRAY_700: 'rgb(55 65 81)',
@@ -290,26 +288,27 @@ const pallette: Record<COLORS_VARIANT, RGB_COLOR> = {
   WHITE: 'rgb(255 255 255)'
 }
 
-type PALLETTE_COLOR = typeof pallette[COLORS_VARIANT]
-
-export const colors = stylex.defineVars<Record<
-string, PALLETTE_COLOR>>({
-  backgroundNavMain: pallette.GRAY_900,
-  backgroundNavSecondary: pallette.GRAY_800,
-  backgroundNavActive: pallette.GRAY_700,
-  linkNavMain: pallette.WHITE,
-  linkNavHover: pallette.GRAY_200,
-  titleMain: pallette.GRAY_700,
-  titleSecondary: pallette.GRAY_700,
-  textMain: pallette.GRAY_900,
-  textSecondary: pallette.GRAY_600
+export const colors = stylex.defineVars({
+  backgroundNavMain: stylex.types.color(palette.GRAY_900),
+  backgroundNavSecondary: stylex.types.color(palette.GRAY_800),
+  backgroundNavActive: stylex.types.color(palette.GRAY_700),
+  linkNavMain: stylex.types.color(palette.WHITE),
+  linkNavHover: stylex.types.color(palette.GRAY_200),
+  titleMain: stylex.types.color(palette.GRAY_700),
+  titleSecondary: stylex.types.color(palette.GRAY_700),
+  textMain: stylex.types.color(palette.GRAY_900),
+  textSecondary: stylex.types.color(palette.GRAY_600),
+  backgroundMain: stylex.types.color(palette.WHITE),
+  backgroundSecondary: stylex.types.color(palette.GRAY_100),
+  borderMain: stylex.types.color(palette.GRAY_200),
+  borderSecondary: stylex.types.color(palette.GRAY_600)
 });
 
 const styles: StyleXStyles<{
-  color: PALLETTE_COLOR
+  color: stylex.Types.Color<RGB_COLOR>
 }> = stylex.create({
   text: {
-    color: colors.backgroundNavMain
+    color: colors.backgroundMain
   }
 });
 
@@ -337,12 +336,12 @@ video::videos/stylex-dark-mode.webm[opts="autoplay,loop"]
 const DARK = '@media (prefers-color-scheme: dark)';
 export const darkTheme = stylex.createTheme(colors, {
   titleMain: {
-    default: pallette.GRAY_700,
-    [DARK]: pallette.WHITE
+    default: palette.GRAY_700,
+    [DARK]: palette.WHITE
   },
   titleSecondary: {
-    default: pallette.GRAY_700,
-    [DARK]: pallette.GRAY_100
+    default: palette.GRAY_700,
+    [DARK]: palette.GRAY_100
   }
   /* ...*/
 });
@@ -392,26 +391,25 @@ image::./images/vitejs.svg[]
 * Babel permet de s'intégrer avec à peu près n'importe quoi
 --
 
-// // TODO garder pour les formats plus long
-// === Un exemple ?
-//
-// [.demo-time]
-// image::images/demo-time-js.jpeg[]
-//
-// [NOTE.speaker]
-// --
-// * Esbuild et Typescript
-// ** Montrer la configuration mais ne pas rentrer trop dans détail
-// ** Parler d'ESLint
-// *  `npm start`
-// * Montrer la page
-// * Ouvrir la console et inspecter un élément pour montrer les classes associées
-// ** Intéressant de montrer par exemple le $ pour le pseudo élément
-// * Démonstration erreurs ?
-// * Démonstration de modification
-// ** Une autre chose qu'on a rapidement envie de faire c'est de partager des définition de styles. Exemple radius. Faire une démo de modification
-// * Démonstration `npm run build` puis montrer le résultat dans le navigateur
-// --
+=== Un exemple ?
+
+[.demo-time]
+image::images/demo-time-js.jpeg[]
+
+[NOTE.speaker]
+--
+* Esbuild et Typescript
+** Montrer la configuration mais ne pas rentrer trop dans détail
+** Parler d'ESLint
+*  `npm start`
+* Montrer la page
+* Ouvrir la console et inspecter un élément pour montrer les classes associées
+** Intéressant de montrer par exemple le $ pour le pseudo élément
+* Démonstration erreurs ?
+* Démonstration de modification
+** Une autre chose qu'on a rapidement envie de faire c'est de partager des définition de styles. Exemple radius. Faire une démo de modification
+* Démonstration `npm run build` puis montrer le résultat dans le navigateur
+--
 
 ////
 === Projet existant Angular
