@@ -1,5 +1,4 @@
 import * as stylex from '@stylexjs/stylex';
-import { StyleXStyles } from '@stylexjs/stylex';
 
 type BREAKPOINTS = 640 | 768 | 1024 | 1280
 

@@ -1,10 +1,10 @@
 import * as stylex from '@stylexjs/stylex';
 
 export interface PulseAnimation {
-  animationName: typeof pulse,
-  animationDuration: '1s' | '2s',
+  animationName: typeof pulse
+  animationDuration: '1s' | '2s'
   animationIterationCount: number
-};
+}
 
 const pulse = stylex.keyframes({
   '0%': { transform: 'scale(1)' },
@@ -12,10 +12,10 @@ const pulse = stylex.keyframes({
   '100%': { transform: 'scale(1)' }
 });
 
-export const animations = stylex.create<{[key: string]: PulseAnimation}>({
+export const animations = stylex.create<Record<string, PulseAnimation>>({
   pulse: {
-    animationName: pulse,
     animationDuration: '1s',
-    animationIterationCount: 1
+    animationIterationCount: 1,
+    animationName: pulse
   }
 });

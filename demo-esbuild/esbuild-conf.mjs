@@ -20,8 +20,7 @@ export const generateBuildConf = (dev) => {
         dev,
         generatedCSSFileName: path.resolve(__dirname, `${targetFolder}/component.css`),
         // Utilise les CSS layer à la place du polyfill :not(#\#)
-        useCSSLayers: true,
-        stylexImports: ['@stylexjs/stylex']
+        useCSSLayers: true
       }),
       copy({
         resolveFrom: __dirname,

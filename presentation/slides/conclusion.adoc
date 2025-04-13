@@ -57,7 +57,7 @@ Github
 --
 
 [.qrcode.openfeedback]
-image::images/qrcode_openfeedback.io.png[]
+image::images/qrcode_mobile.devoxx.com.png[]
 --
 [.qrcode.title.openfeedback]
 openfeedback
