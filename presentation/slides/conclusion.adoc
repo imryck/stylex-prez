@@ -32,6 +32,7 @@ Tient ses promesses
 
 === L'heure du choix
 
+[%step]
 image::images/team-work.jpg[]
 
 [NOTE.speaker]
